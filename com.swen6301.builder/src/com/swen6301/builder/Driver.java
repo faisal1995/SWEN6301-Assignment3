@@ -1,5 +1,6 @@
 package com.swen6301.builder;
 
+import com.swen6301.builder.util.Patient;
 import com.swen6301.builder.util.PersistenceUtils;
 import com.swen6301.builder.util.RandomUtils;
 
@@ -31,7 +32,17 @@ public class Driver {
 		int height = RandomUtils.randomNumber(300);
 		boolean organDonor = RandomUtils.randomBoolean();
 		String bloodType = RandomUtils.randomBloodType();
-		boolean success = PersistenceUtils.storePatientInfo(firstName, middleName, lastName, age, weight, sex, height, organDonor, bloodType);
+		Patient p = new Patient();
+		p.setAge(age);
+		p.setBloodType(bloodType);
+		p.setFirstName(firstName);
+		p.setHeight(height);
+		p.setLastName(lastName);
+		p.setMiddleName(middleName);
+		p.setOrganDonor(organDonor);
+		p.setSex(sex);
+		p.setWeight(weight);
+		boolean success = PersistenceUtils.storePatientInfo(p);
 		if(success) {
 			System.out.println("Patient [" + firstName + ", " + lastName + "] has been successfully processed!");
 		} else {
