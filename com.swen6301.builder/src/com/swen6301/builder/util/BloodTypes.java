@@ -12,7 +12,7 @@ public enum BloodTypes {
 
 	ANEG("A", '-'), APOS("A", '+'), BNEG("B", '-'), BPOS("B", '+'),
 	ONEG("O", '-'), OPOS("O", '+'), ABNEG("AB", '-'), ABPOS("AB", '+'),
-	NONE("",'\0');
+	NONE("None",'\0');
 
 
 	private String name;

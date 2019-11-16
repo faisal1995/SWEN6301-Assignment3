@@ -1,5 +1,8 @@
 package com.swen6301.builder.util;
 
+import java.security.SecureRandom;
+import java.util.Locale;
+import java.util.Objects;
 import java.util.Random;
 
 public class RandomUtils {
@@ -37,6 +40,9 @@ public class RandomUtils {
 	    	builder.append(c);
 	    }
 	    
+
+
+
 	    return builder.toString();
 	}
 	
